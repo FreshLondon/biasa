@@ -30,7 +30,7 @@
 		<h2><?php bloginfo(); ?></h2>
 	</div><!-- #header_title -->
 
-	<div id="header_menu" class="column alignright">
+	<div id="header_menu" class="column">
 		<?php wp_nav_menu( array( 'theme_location' => 'header_menu' )); ?>
 	</div><!-- #header_menu -->
 

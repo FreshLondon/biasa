@@ -34,13 +34,15 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  @include respond-below(xs) {
+	flex-direction: column;
+  }
 }
 
 
 .column {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
   flex: 1;
   padding: 1em;
 }
@@ -64,17 +66,39 @@ body {
 /* # Layout Rules --------------------------------------------*/
 
 header {
-  background: #3a6674;
+  //background: #3a6674;
 }
 
 
 #header_title {
   background: green;
+
+  // font styling
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  // already under the influence of 'flex-direction: column;'
+  align-items: flex-start; // left on desktops
+  justify-content: center; // fixes height, aligns vertically
+
+  @include respond-below(xs) {
+	align-items: center; // center title on mobiles
+  }
 }
 
 
 #header_menu {
   background: red;
+
+  // already under the influence of 'flex-direction: column;'
+  align-items: flex-end; // right on desktops
+  justify-content: center; // fixes height, aligns vertically
+
+  @include respond-below(xs) {
+	align-items: center; // center title on mobiles
+  }
+
+  @import 'navigation'; // import menu styles
 }
 
 
@@ -103,10 +127,10 @@ footer {
 #footer_menu {
   background: beige;
   @include respond-below(md) {
-    background: yellow;
+	background: yellow;
   }
   @include respond-below(xs) {
-   background: red;
+	background: red;
   }
   @include respond-below(sm) {
 	background: blue;
@@ -121,3 +145,7 @@ footer {
 /* # Theme Rules ---------------------------------------------*/
 
 /* # Changing State ------------------------------------------*/
+
+/* # Forms ---------------------------------------------------*/
+
+@import "forms";
