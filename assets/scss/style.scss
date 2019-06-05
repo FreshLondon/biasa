@@ -71,7 +71,7 @@ header {
 
 
 #header_title {
-  background: green;
+  //background: green;
 
   // font styling
   text-transform: uppercase;
@@ -88,7 +88,7 @@ header {
 
 
 #header_menu {
-  background: red;
+  //background: red;
 
   // already under the influence of 'flex-direction: column;'
   align-items: flex-end; // right on desktops
@@ -103,7 +103,7 @@ header {
 
 
 section {
-  background: blue;
+  // background: blue;
   padding: 1em;
 }
 
@@ -115,26 +115,17 @@ section article {
 
 
 footer {
-  background: purple;
+
 }
 
 
 #footer_credits {
-  background: pink;
+
 }
 
 
 #footer_menu {
-  background: beige;
-  @include respond-below(md) {
-	background: yellow;
-  }
-  @include respond-below(xs) {
-	background: red;
-  }
-  @include respond-below(sm) {
-	background: blue;
-  }
+
 }
 
 

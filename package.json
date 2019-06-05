@@ -1,10 +1,10 @@
 {
-	"name": "nielslange/biasa",
+	"name": "biasa",
 	"version": "1.0.0",
 	"dependencies": {
-		"gulp": "^4.0.2",
-		"axios": ">=0.19.0"
+		"gulp": "^4.0.2"
 	},
+	"description": "Bespoke, lightweight, agile.",
 	"devDependencies": {
 		"browser-sync": "^2.26.5",
 		"gulp-autoprefixer": "^6.1.0",
